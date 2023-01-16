@@ -16,11 +16,17 @@ public class Main {
                 new BaseGameTitle(),
                 new BaseGameSubTitle()
         );
-        greeting.show();
+        print(greeting.message());
+
         Player computer = new ComputerPlayer();
         Player user = new UserPlayer();
         Game game = new Game(computer, user);
-        Result result = game.play();
-        System.out.println(result.message());
+
+        Result gameResult = game.play();
+        print(gameResult.message());
+    }
+
+    private static void print(String text) {
+        System.out.println(text);
     }
 }

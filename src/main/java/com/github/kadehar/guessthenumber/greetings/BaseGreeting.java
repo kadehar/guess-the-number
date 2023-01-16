@@ -13,9 +13,7 @@ public class BaseGreeting implements Greeting {
     }
 
     @Override
-    public void show() {
-        System.out.println(title.asMessage());
-        System.out.println(subtitle.asMessage());
-        System.out.println();
+    public String message() {
+        return String.format("%s\n%s\n", title.asMessage(), subtitle.asMessage());
     }
 }
